@@ -15,14 +15,7 @@
 
   </head>
 
-    <div class="navbar-yelp">
-      <div>
-        <h3><%= link_to "Yelp MVP", restaurants_path %></h3>
-      </div>
-      <div>
-        <%= link_to "New Restaurant", new_restaurant_path, class: "btn btn-primary" %>
-      </div>
-    </div>
+    <%= render :partial => 'layouts/navbar' %>
 
     <div class="container">
       <div class="row">
