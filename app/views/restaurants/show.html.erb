@@ -1,0 +1,29 @@
+<div class="container">
+
+<h1>Your selected Restaurant</h1>
+
+    <div class="restaurant">
+      <ul class="restaurant-details" style="list-style: none">
+        <li><h2><%= @restaurant.name %></h2></li>
+        <li><p><strong>Address: </strong><%= @restaurant.address %></p></li>
+        <li><p><strong>Phone: </strong><%= @restaurant.phone_number %></p></li>
+        <li><p><strong>Type: </strong><%= @restaurant.category %></p></li>
+      </ul>
+    </div>
+    <br>
+    <p><%= link_to "Review this Restaurant", new_restaurant_review_path(@restaurant), class: 'btn btn-primary' %></p>
+    <br>
+
+<h2>Available Reviews for <strong><%= @restaurant.name %></strong></h2>
+
+    <% @reviews.each do |review| %>
+      <div class="review">
+        <ul class="review-details" style="list-style: none">
+          <li><p><strong>Content: </strong><%= review.content %></p></li>
+          <li><p><strong>Rating: </strong><%= review.rating %></p></li>
+        </ul>
+      </div>
+    <% end %>
+    <br>
+    <p><%= link_to "Back to Restaurants", restaurants_path, class: "link" %></p>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+
+  <h1>Write a Review for <strong><%= @restaurant.name %></strong></h1>
+
+  <%= render 'form', restaurant: @restaurant, review: @review %>
+
+  <br>
+  <p><%= link_to "Back to Restaurants", restaurants_path, class: "link" %></p>
+
+</div>
